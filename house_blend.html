@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Daily Grind House Blend</title>
+  </head>
+  <body>
+    <!-- Change Heading -->
+    <h1>The Daily Grind House Blend</h1>
+
+    <!-- Ordered List -->
+    <ol>
+      <li>Traditional</li>
+      <li>Decaffeinated</li>
+      <li>Holiday Blend</li>
+    </ol>
+
+    <p>
+      One sip and you will understand what makes this house blend so special.
+      Our blend is made with the finest Latin American beans and grown fresh
+      when you order. Buy it by the cup or by the pound.
+    </p>
+    <script>
+      // Function to format the date as "Monday, March 1, 2099"
+      function formatDate() {
+        const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+        const currentDate = new Date();
+        return currentDate.toLocaleDateString('en-US', options);
+      }
+    
+      // Function to add the formatted date to the bottom of the page
+      function addCurrentDate() {
+        const currentDate = formatDate();
+    
+        // Create a new paragraph element
+        const dateParagraph = document.createElement('p');
+    
+        // Set the text content of the paragraph to the formatted date
+        dateParagraph.textContent = 'Current Date: ' + currentDate;
+    
+        // Append the paragraph to the body of the document
+        document.body.appendChild(dateParagraph);
+      }
+    
+      // Call the function when the page has finished loading
+      window.onload = addCurrentDate;
+    </script>
+  </body>
+</html>

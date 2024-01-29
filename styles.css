@@ -1,0 +1,59 @@
+*, html {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.addressPhone {
+  float: right;
+  padding-right: 30px;
+  text-align: right;
+}
+
+/* NAVIGATION STYLES */
+.navbar {
+  width: 100%;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  font-size: 17px;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0px;
+  padding-left: 30px;
+}
+
+ul {
+  padding-left: 20px;
+  border: none;
+}
+
+li {
+  padding: 10px;
+  border: none;
+}
+
+.breads {
+  padding-bottom: 100px;
+  padding-right: 30px;
+  float: right;
+}
