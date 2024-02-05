@@ -34,6 +34,16 @@
     <h3><span>The Daily Grind</span></h3>
     
     <p id="datetime"></p>
+    
+    <!-- Add poll options -->
+    <div id="poll">
+       <h3>Vote for Your Favorite Coffee!</h3>
+       <input type="radio" name="coffee" value="Espresso"> Espresso<br>
+       <input type="radio" name="coffee" value="Latte"> Latte<br>
+       <input type="radio" name="coffee" value="Cappuccino"> Cappuccino<br>
+       <button onclick="vote()">Submit Vote</button>
+       <p id="pollResult"></p>
+    </div>
 
     <div class="ul">
       <!-- Unordered List -->
@@ -90,6 +100,20 @@ window.onload = function () {
   updateDateTime(); // Update date and time on page load
   setInterval(updateDateTime, 1000); // Update date and time every second
 };
+  
+  // JavaScript function for polling
+  function vote() {
+    var selectedCoffee = document.querySelector('input[name="coffee"]:checked');
+
+    if (selectedCoffee) {
+      var coffeeChoice = selectedCoffee.value;
+      // Use AJAX to send the selected choice to the server
+      // Handle server response to update the pollResult element
+      document.getElementById("pollResult").textContent = "Thank you for voting for " + coffeeChoice + "!";
+    } else {
+      alert("Please select a coffee option before voting.");
+    }
+  }
     </script>
     
   </body>
