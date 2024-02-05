@@ -69,6 +69,26 @@
     
       // Call the function when the page has finished loading
       window.onload = addCurrentDate;
+      
+      // Function to update the current date and time using AJAX
+function updateDateTime() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      var currentDate = this.responseText;
+      document.getElementById("datetime").textContent = "Current Date: " + currentDate;
+    }
+  };
+  xhttp.open("GET", "datetime.php", true);
+  xhttp.send();
+}
+
+// Call the function when the page has finished loading
+window.onload = function () {
+  updateDateTime(); // Update date and time on page load
+  setInterval(updateDateTime, 1000); // Update date and time every second
+};
     </script>
+    
   </body>
 </html>
