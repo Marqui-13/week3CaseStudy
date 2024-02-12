@@ -1,7 +1,5 @@
 <?php
 date_default_timezone_set("America/Chicago"); // Set the timezone to Central Time
 
-$currentDate = date('l, F j, Y'); // Format the date
-
-echo $currentDate; // Output the date
+echo date("Y-m-d H:i:s"); // Adjust the format as needed
 ?>
